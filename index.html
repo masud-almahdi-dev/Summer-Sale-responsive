@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,7 @@
             <div class="flex flex-col">
                 <h3 class="font-semibold text-2xl md:text-4xl mb-8 text-center lg:text-left">Kitchenware</h3>
                 <div class="flex flex-col xl:flex-row gap-6">
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod1.png" alt="">
                         </div>
@@ -62,7 +62,7 @@
                             <h3 class="font-normal text-light-dark text-xl price">39.00 TK</h3>
                         </div>
                     </article>
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod2.png" alt="">
                         </div>
@@ -79,7 +79,7 @@
                             <h3 class="font-normal text-light-dark text-xl price">25.00 TK</h3>
                         </div>
                     </article>
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod3.png" alt="">
                         </div>
@@ -100,7 +100,7 @@
             <div class="flex flex-col">
                 <h3 class="font-semibold text-2xl md:text-4xl mb-8 text-center lg:text-left">Sportswear</h3>
                 <div class="flex flex-col xl:flex-row gap-6">
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod4.png" alt="">
                         </div>
@@ -116,7 +116,7 @@
                             <h3 class="font-normal text-light-dark text-xl price">49.00 TK</h3>
                         </div>
                     </article>
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod5.png" alt="">
                         </div>
@@ -132,7 +132,7 @@
                             <h3 class="font-normal text-light-dark text-xl price">69.00 TK</h3>
                         </div>
                     </article>
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod6.png" alt="">
                         </div>
@@ -153,7 +153,7 @@
             <div class="flex flex-col">
                 <h3 class="font-semibold text-2xl md:text-4xl mb-8 text-center lg:text-left">Furniture</h3>
                 <div class="flex flex-col xl:flex-row gap-6">
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod7.png" alt="">
                         </div>
@@ -169,7 +169,7 @@
                             <h3 class="font-normal text-light-dark text-xl price">185.00 TK</h3>
                         </div>
                     </article>
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod8.png" alt="">
                         </div>
@@ -186,7 +186,7 @@
                             <h3 class="font-normal text-light-dark text-xl price">299.00 TK</h3>
                         </div>
                     </article>
-                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer">
+                    <article class="bg-white rounded-lg p-5 w-full cursor-pointer  product">
                         <div class="flex justify-center items-center bg-[#1111110D] rounded-lg aspect-[18.9/12.5]">
                             <img src="images/prod9.png" alt="">
                         </div>
@@ -218,7 +218,9 @@
                         <button class="font-semibold text-xl bg-primary-purple text-white px-[1.38rem] py-4 disabled:bg-[#11111111]" style="border-radius: 0rem 0.5rem 0.5rem 0rem;" disabled>Apply</button>
                     </div>
                 </article>
-                <article class="bg-white rounded-lg p-5 pb-0 w-full cursor-pointer flex flex-col gap-6">
+                <article class="bg-white rounded-lg p-5 pb-0 w-full flex flex-col gap-6">
+                    <div id="cart-items" class="flex flex-col gap-4 text-xl lg:text-2xl font-medium">
+                    </div>
                     <hr>
                     <div class="flex flex-col gap-4 text-xl lg:text-2xl font-medium">
                         <p id="total"><span>Total price: </span><span id="cash" class="text-[#11111180]">0.00TK</span></p>
@@ -226,11 +228,86 @@
                         <p id="final-total"><span>Total: </span><span id="cash" class="text-[#11111180]">0.00TK</span></p>
                     </div>
                     <hr>
-                    <button class="font-semibold bottom-0 -mb-[20px] text-xl bg-primary-purple rounded-lg text-white px-[1.38rem] py-4 disabled:bg-[#efefef]" disabled>Make Purchase</button>
+                    <button id="purchasebutton" class="font-semibold bottom-0 -mb-[20px] text-xl bg-primary-purple rounded-lg text-white px-[1.38rem] py-4 disabled:bg-[#efefef]" disabled onclick="cartmodal.showModal()">Make Purchase</button>
+                    <dialog id="cartmodal" class="modal modal-bottom lg:modal-middle">
+                    <form method="dialog" class="modal-box bg-white flex flex-col items-center justify-center min-w-max md:px-28 py-[6.5rem] gap-10">
+                        <img src="images/congo.png" alt="">
+                        <div class="flex flex-col justify-center items-center gap-4">
+                            <h5 class="font-bold text-4xl lg:text-5xl">Congratulations</h5>
+                            <p class="font-normal text-xl">Your Purchase the product</p>
+                        </div>
+                        <div class="modal-action">
+                        <button id="gohome" class="font-semibold text-xl bg-primary-purple rounded-lg text-white px-[2.81rem] py-4 disabled:bg-[#efefef]">Go Home</button>
+                        </div>
+                    </form>
+                    </dialog>
                 </article>
         </section>
 
         </div>
     </main>
+    <script>
+        let mycart = document.querySelector("#cart-items")
+        let total = document.querySelector("#total #cash")
+        let discount = document.querySelector("#discount #cash")
+        let finaltotal = document.querySelector("#final-total #cash")
+        let purchasebutton = document.getElementById("purchasebutton")
+        let couponinput = document.getElementById("coupon-input")
+        let promocode = document.getElementById("promo-code")
+        let hasdiscount = false;
+        let discountValue = 0;
+        function addfinal(){
+            let newfinal = parseFloat(total.innerText.slice(0,-2)) - parseFloat(discount.innerText.slice(0,-2))
+            finaltotal.innerText = newfinal.toFixed(2)+"TK"
+        }
+        function adddiscount(){
+            if(hasdiscount){
+                let newdiscount = parseFloat(total.innerText.slice(0,-2))*discountValue
+                discount.innerText = newdiscount.toFixed(2)+"TK"
+            }
+        }
+        function checkdiscount(){
+            if(couponinput.querySelector("input").value === promocode.innerText){
+                hasdiscount = true
+                discountValue = 20/100
+                adddiscount()
+                addfinal()
+            }
+        }
+        function addtocart(itemName,price){
+
+            let item = document.createElement("p")
+            item.innerText = `${mycart.children.length+1}. ${itemName}`
+            mycart.appendChild(item);
+            let latest = parseFloat(total.innerText.slice(0,-2))+price
+            total.innerText = latest.toFixed(2)+"TK"
+            if(purchasebutton.disabled){
+                purchasebutton.disabled = false
+            }
+            if(!hasdiscount && parseFloat(total.innerText.slice(0,-2)) >= 200 && couponinput.querySelector("button").disabled){
+                couponbutton = couponinput.querySelector("button")
+                couponbutton.disabled = false
+                couponbutton.addEventListener("click",checkdiscount)
+            }
+            adddiscount()
+            addfinal()
+        }
+        let products = document.querySelectorAll(".product")
+        for(let i of products){
+            i.addEventListener("click", function(){addtocart(i.querySelector(".iname").innerText,parseFloat(i.querySelector(".price").innerText.slice(0,-2)))});
+        }
+        function clearall(){
+            mycart.innerHTML = ""
+            total.innerText = "0.00TK"
+            adddiscount()
+            addfinal()
+            hasdiscount = false
+            discountValue = 0
+            couponinput.querySelector("input").value = ""
+            couponinput.querySelector("button").disabled = true
+            purchasebutton.disabled = true
+        }
+        document.getElementById("gohome").addEventListener("click",clearall)
+    </script>
 </body>
 </html>
